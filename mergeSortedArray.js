@@ -5,33 +5,18 @@
  * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
-// Needs work
- var merge = function(nums1, m, nums2, n) {
-    let i = 0;
-    let j = 0;
-    
-    while (j <= n - 1) {
-        if (m === 0) {
-            nums1.splice(i, 0, nums2[j]);
-            nums1.pop();
-            j++;
-        } else if (nums2[j] <= nums1[i]) {
-            nums1.splice(i, 0, nums2[j]);
-            nums1.pop();
-            i++;
-            j++;
-        } else if (nums1[i] === 0 && i > m) {
-            nums1.splice(i, 0, nums2[j]);
-            nums1.pop();
-            j++;
-        } else if (nums2[j] > nums1[i]) {
-            i++;
+var merge = function(nums1, m, nums2, n) {
+    let indexOfMergedArray = m + n - 1;
+    let nums1Index = m - 1;
+    let nums2Index = n - 1;
+
+    while (indexOfMergedArray >= 0) {
+        if (nums1[nums1Index] > nums2[nums2Index] || nums2Index < 0) {
+            nums1[indexOfMergedArray--] = nums1[nums1Index--]; 
+        } else {
+            nums1[indexOfMergedArray--] = nums2[nums2Index--];
         }
     }
+}
 
-    console.log(nums1);
-    return nums1;
-};
-
-
-merge([1,0],1,[2],1);
+merge([1,2,3,0,0,0],3, [2,5,6], 3);
