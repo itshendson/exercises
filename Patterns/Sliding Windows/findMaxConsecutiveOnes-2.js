@@ -12,15 +12,16 @@
         
         if (nums[right] === 0) countOfZeroes++
         
-        while (countOfZeroes >= 2) {
+        while (countOfZeroes === 2) {
             maxConsecutiveOnes = Math.max(maxConsecutiveOnes, right - left);
-            console.log(nums[left])
-            if (nums[left] = 0) countOfZeroes--;
+            if (nums[left] === 0) countOfZeroes--;
             left++;
         }
         
         right++;
     }
+
+    if (countOfZeroes < 2) maxConsecutiveOnes = Math.max(maxConsecutiveOnes, right - left) 
     
     return maxConsecutiveOnes;
 };
