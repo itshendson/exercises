@@ -24,6 +24,7 @@ maxProfit([7,1,5,3,6,4]);
 // Need to know why contract window
 
 // Test cases
+// [5,0,15]
 // [7,1,5,3,6,4]
 // [0]
 // [0,1]
