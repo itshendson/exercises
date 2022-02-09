@@ -3,6 +3,9 @@
 - O(n)
 - One pointer on the leftmost element, one pointer on the rightmost element
 
+## Recognizing Problem
+- There is usually a Target value to sum, match, or duplicate to remove
+
 ```
 def twoSum(self, nums: List[int], target: int) -> List[int]:
     left, right = 0, len(nums) - 1
