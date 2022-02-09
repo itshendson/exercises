@@ -31,7 +31,7 @@ var isTurbulent = function(arr, right) {
     return false;
 }
 
-maxTurbulenceSize([9,4,2,10,7,8,8,1,9]);
+maxTurbulenceSize([4,8,4,2]);
 
 // Test Case
 // [9,4,2,10,7,8,8,1,9]
