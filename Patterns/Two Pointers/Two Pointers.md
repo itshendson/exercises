@@ -6,6 +6,11 @@
 ## Recognizing Problem
 - There is usually a Target value to sum, match, or duplicate to remove
 
+## Types of Two Pointers
+- Collision - One array, move from two sides to middle.
+- Forward - One array, both move forward.
+- Parallel - Two arrays, each array has been assigned with a pointer.
+
 ```
 def twoSum(self, nums: List[int], target: int) -> List[int]:
     left, right = 0, len(nums) - 1
