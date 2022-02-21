@@ -1,5 +1,6 @@
 /**
- * data: any data type
+ * @param data: any data type
+ * @param next: node
  */
 class Node {
     constructor(data) {
@@ -40,6 +41,21 @@ class LinkedList {
 
     getFirst() {
         return this.head;
+    }
+
+    //reverse a Singly Linked List
+    reverseLinkedList(linkedList) {
+        let node = linkedList;
+        let previous = null;
+
+        while(node) {
+            let save = node.next;
+            node.next = previous;
+            previous = node;
+            node = save;
+        }
+
+        return previous;
     }
 }
 
