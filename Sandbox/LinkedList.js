@@ -57,6 +57,16 @@ class LinkedList {
 
         return previous;
     }
+
+    //reverse a Singly Linked List
+    reverseLinkedListRecursively(head) {
+        if (head === null || head.next === null) return head;
+
+        newHead = this.reverseLinkedList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
 }
 
 let nodeA = new Node(10);
